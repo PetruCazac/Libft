@@ -6,12 +6,11 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:53:37 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/17 09:32:18 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 13:44:59 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

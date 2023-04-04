@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:27:51 by pcazac            #+#    #+#             */
-/*   Updated: 2023/04/01 20:53:00 by pcazac           ###   ########.fr       */
+/*   Created: 2023/03/31 17:27:20 by pcazac            #+#    #+#             */
+/*   Updated: 2023/03/31 17:51:41 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	int	min;
-	int	max;
+#include "libft.h"
 
-	min = 48;
-	max = 57;
-	if (c < min || c > max)
-		return (0);
-	else
-		return (1);
+void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	new->next = *lst;
+	*lst = new;
+	return ;
 }

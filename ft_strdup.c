@@ -6,7 +6,7 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 19:05:48 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/29 12:12:45 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 13:54:17 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strdup(const char *s1)
 {
-	size_t	i;
-	size_t	l;
+	int		l;
+	int		i;
 	char	*s2;
 
 	i = 0;

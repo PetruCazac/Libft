@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/14 15:27:51 by pcazac            #+#    #+#             */
-/*   Updated: 2023/04/01 20:53:00 by pcazac           ###   ########.fr       */
+/*   Created: 2023/04/01 14:10:15 by pcazac            #+#    #+#             */
+/*   Updated: 2023/04/01 16:04:12 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
-{
-	int	min;
-	int	max;
+#include "libft.h"
 
-	min = 48;
-	max = 57;
-	if (c < min || c > max)
-		return (0);
-	else
-		return (1);
+void	ft_lstclear(t_list **lst, void (*del)(void*))
+{
+	t_list	*temp;
+
+	while (*lst)
+	{
+		temp = *lst;
+		del(temp->content);
+		*lst = temp->next;
+		free(temp);
+	}
 }

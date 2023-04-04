@@ -6,7 +6,7 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 09:51:54 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/30 12:50:42 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 14:03:22 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*s2;
-	size_t	i;
-	size_t	j;
-	size_t	l;
+	int		i;
+	int		j;
+	int		l;
 
 	i = 0;
 	j = 0;

@@ -6,14 +6,14 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:38:55 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/29 10:47:10 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 13:34:20 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_transform(const char *s);
-int	ft_isspace(char str);
+static int	transform(const char *s);
+static int	isspace(char str);
 
 int	ft_atoi(const char *str)
 {
@@ -22,18 +22,18 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	j = 0;
-	while (ft_isspace(str[i]))
+	while (isspace(str[i]))
 		i++;
 	if (str[i] == '-')
-			j = ft_transform(&str[i + 1]) * (-1);
+			j = transform(&str[i + 1]) * (-1);
 	if (str[i] == '+')
-			j = ft_transform(&str[i + 1]);
+			j = transform(&str[i + 1]);
 	if (str[i] > 47 && str[i] < 58)
-			j = ft_transform(&str[i]);
+			j = transform(&str[i]);
 	return (j);
 }
 
-int	ft_transform(const char *s)
+static int	transform(const char *s)
 {
 	int	i;
 	int	j;
@@ -48,7 +48,7 @@ int	ft_transform(const char *s)
 	return (j);
 }
 
-int	ft_isspace(char str)
+static int	isspace(char str)
 {
 	if (str == 32 || (str >= 9 && str <= 13))
 		return (1);

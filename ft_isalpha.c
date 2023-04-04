@@ -6,15 +6,15 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/14 15:16:30 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/14 18:36:46 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 13:41:43 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int a)
+int	ft_isalpha(int c)
 {
-	if (a >= 65 && a <= 90)
+	if (c >= 65 && c <= 90)
 		return (1);
-	if (a >= 97 && a <= 122)
+	if (c >= 97 && c <= 122)
 		return (1);
 	else
 		return (0);

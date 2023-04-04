@@ -6,20 +6,18 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 10:08:45 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/29 09:02:07 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 14:02:47 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int		i;
 	char	*l;
 	char	a;
 
 	i = 0;
-	l = NULL;
+	l = 0;
 	a = (char) c;
 	while (s[i])
 	{

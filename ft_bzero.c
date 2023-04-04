@@ -6,18 +6,18 @@
 /*   By: pcazac <pcazac@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 11:38:57 by pcazac            #+#    #+#             */
-/*   Updated: 2023/03/16 16:08:32 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/03/31 13:39:23 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *c, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	char	*d;
 	int		i;
 
-	d = c;
+	d = s;
 	i = 0;
 	while (n > 0)
 	{
