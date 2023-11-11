@@ -6,13 +6,13 @@
 #    By: pcazac <pcazac@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/15 08:56:05 by pcazac            #+#    #+#              #
-#    Updated: 2023/11/09 15:03:32 by pcazac           ###   ########.fr        #
+#    Updated: 2023/11/10 14:26:51 by pcazac           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME := libft.a
 
-SRCS := ft_isprint.c ft_putendl_fd.c ft_strlcat.c ft_substr.c \
+SRC := ft_isprint.c ft_putendl_fd.c ft_strlcat.c ft_substr.c \
 	ft_atoi.c ft_itoa.c ft_putnbr_fd.c ft_strlcpy.c ft_tolower.c \
 	ft_bzero.c ft_memchr.c ft_putstr_fd.c ft_strlen.c ft_toupper.c \
 	ft_calloc.c ft_memcmp.c ft_split.c ft_strmapi.c \
@@ -27,7 +27,7 @@ SRCS := ft_isprint.c ft_putendl_fd.c ft_strlcat.c ft_substr.c \
 OBJ_DIR := obj
 SRC_DIR := src
 
-OBJ := $(SRCS:%.c=$(OBJ_DIR)/%.o)
+OBJ := $(SRC:%.c=$(OBJ_DIR)/%.o)
 
 CC= cc
 CFLAGS= -g -Wall -Wextra -Werror

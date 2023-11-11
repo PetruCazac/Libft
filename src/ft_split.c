@@ -6,7 +6,7 @@
 /*   By: pcazac <pcazac@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 10:52:17 by pcazac            #+#    #+#             */
-/*   Updated: 2023/11/09 13:53:29 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/11/09 22:38:01 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ static int		occur_str(char const *s, char c);
 char	**ft_split(char const *s, char c)
 {
 	char	**sn;
-	size_t	j;
 
-	j = 0;
 	if (!s)
 		return (NULL);
 	sn = (char **) ft_calloc(occur(s, c), sizeof(char *));

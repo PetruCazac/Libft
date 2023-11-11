@@ -16,10 +16,8 @@ static void	transform_itoa(long int n, int fd);
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	int			i;
 	long int	j;
 
-	i = 0;
 	if (n < 0)
 	{
 		write(fd, "-", 1);

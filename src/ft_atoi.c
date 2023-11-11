@@ -6,14 +6,14 @@
 /*   By: pcazac <pcazac@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:38:55 by pcazac            #+#    #+#             */
-/*   Updated: 2023/11/09 13:53:29 by pcazac           ###   ########.fr       */
+/*   Updated: 2023/11/09 22:36:46 by pcazac           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libft.h"
 
 static int	transform(const char *s);
-static int	isspace(char str);
+static int	ft_isspace(char str);
 
 int	ft_atoi(const char *str)
 {
@@ -22,7 +22,7 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	j = 0;
-	while (isspace(str[i]))
+	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')
 			j = transform(&str[i + 1]) * (-1);
@@ -48,7 +48,7 @@ static int	transform(const char *s)
 	return (j);
 }
 
-static int	isspace(char str)
+static int	ft_isspace(char str)
 {
 	if (str == 32 || (str >= 9 && str <= 13))
 		return (1);
