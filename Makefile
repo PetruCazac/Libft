@@ -6,7 +6,7 @@
 #    By: pcazac <pcazac@student.42heilbronn.de>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/15 08:56:05 by pcazac            #+#    #+#              #
-#    Updated: 2023/11/10 14:26:51 by pcazac           ###   ########.fr        #
+#    Updated: 2023/11/11 03:01:08 by pcazac           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,11 +40,12 @@ $(NAME): $(OBJ)
 	@echo "$@ built successfully."
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	@echo "Cleaning up object files..."
-	@/bin/rm -f $(OBJ)
+	@/bin/rm -rf $(OBJ_DIR)
 
 fclean: clean
 	@echo "Cleaning up $(NAME)"
